@@ -39,9 +39,6 @@ ul li {
     font-display: swap;
 }
 
-
-
-
 //--------------------------
 
 html,
@@ -360,9 +357,7 @@ body {
     // border: 3px solid orange;  /* padding вокруг плашки */
   }
 
-
 .content {
-
     &__title {
         display: flex;
         flex-direction: row;
@@ -379,7 +374,6 @@ body {
 }
 
 .playlist-title {
-
     &__col {
         font-style: normal;
         font-weight: 400;
@@ -439,6 +433,7 @@ body {
         align-items: center;
         width: 447px;
         gap: 17px;
+
     }
 
     &__title-image {
@@ -547,12 +542,7 @@ body {
     }
 }
 
-
-
-
-
 .sidebar {
-
     &__personal {
         display: flex;
         flex-direction: row;
@@ -656,13 +646,9 @@ body {
         align-items: center;
         padding: 0 92px 0 0;
     }
-
-
 }
 
 .player {
-
-
     &__controls {
         display: flex;
         flex-direction: row;
@@ -829,10 +815,7 @@ body {
     }
 }
 
-
-
 .volume {
-
     &__content {
         display: flex;
         flex-direction: row;
