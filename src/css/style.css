@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -224,11 +225,13 @@ body {
   line-height: 24px;
   margin-right: 15px;
 }
+
 .filter__container-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .filter__button {
   font-style: normal;
   font-weight: 400;
@@ -241,6 +244,7 @@ body {
 .filter__button:not(:last-child) {
   margin-right: 10px;
 }
+
 .filter__btn_active {
   border: 1px solid #AD61FF;
   color: #AD61FF;
@@ -369,6 +373,7 @@ body {
   align-items: center;
   width: 447px;
   gap: 17px;
+
 }
 .track__title-image {
   width: 51px;
@@ -613,6 +618,7 @@ body {
   align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
+
 }
 .track-play__image {
   width: 51px;

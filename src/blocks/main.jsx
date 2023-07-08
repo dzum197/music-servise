@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable camelcase */
+
 import React from 'react';
 import TrackTitle from './track/track-title';
 import TrackImage from './track/track-image';
@@ -15,6 +16,7 @@ import SkelTitle from './skeleton/skeleton-title';
 
 const { useState, useEffect } = React;
 
+
 function Main() {
     return (
         <div className='main'>
@@ -27,12 +29,11 @@ function Main() {
 
 export default Main
 
-
-
 function Nav() {
     const [visible, setVisible] = useState(false);
 
     const toggleVisibility = () => setVisible(!visible);
+
 
     return (
         <nav className='main__nav nav'>
@@ -48,7 +49,6 @@ function Nav() {
             { visible && (
                 <NavMenu />
             )}
-            
         </nav>
     );
 };
@@ -159,8 +159,7 @@ function CenterBlock() {
                                 <PlaylistItem playlist_title="How Deep Is Your Love" playlist_author="Calvin Harris, Disciples" playlist_album="How Deep Is Your Love" playlist_time="3:32"/>
                                 <PlaylistItem playlist_title="Morena" playlist_author="Tom Boxer" playlist_album="Soundz Made in Romania" playlist_time="3:36"/>
                                 <PlaylistItem playlist_title="Guilt" playlist_author="Dynoro" playlist_album="Welcome" playlist_time="0"/>
-                            </>
-                    
+                            </>                   
                     }
                 </div>
             </div>
@@ -255,7 +254,6 @@ function SlideBar() {
         <div className="main__sidebar sidebar">
             <SidebarPersonal name="Sergey.Ivanov"/>
             <div className="sidebar__avatar" />
-
             <div className="sidebar__block">
                 <div className="sidebar__list">
                     <SidebarItem />
