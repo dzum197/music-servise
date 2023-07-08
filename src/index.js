@@ -4,11 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-<<<<<<< Updated upstream
-const root = ReactDOM.createRoot(document.getElementById('root'));
-=======
+
 const root = ReactDOM.createRoot(document.querySelector('.root'));
->>>>>>> Stashed changes
+
 root.render(
   <React.StrictMode>
     <App />
