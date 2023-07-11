@@ -2,7 +2,7 @@ function ButtonDislike() {
     return(
         <div className="track-play__dislike _btn-icon">
             <svg className="track-play__dislike-svg" alt="dislike">
-                <use href="img/icon/sprite.svg#icon-dislike"></use>
+                <use href="img/icon/sprite.svg#icon-dislike" />
             </svg>
         </div>
     );
