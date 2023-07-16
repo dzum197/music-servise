@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/style.css';
 import Container from './container';
+// import styled from 'styled-components';
 
 const root = ReactDOM.createRoot(document.querySelector('.wrapper'));
 root.render(

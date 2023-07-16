@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import TrackTitle from './track/track-title';
 import TrackImage from './track/track-image';
@@ -5,14 +6,30 @@ import Author from './track/author';
 import Album from './track/album';
 import TrackTime from './track/track-time';
 
+=======
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable camelcase */
+
+// import React from 'react';
+import styles from "./main.module.css";
+
+// const { useState, useEffect } = React;
+import Nav from "./nav/nav";
+import CenterBlock from "./centerblock/centerblock";
+import SlideBar from "./sidebar/sidebar";
+
+>>>>>>> Stashed changes
 
 function Main() {
     return (
-        <div className='main'>
-            <Nav />
-            <CenterBlock />
-            <SlideBar />
+        <div className={styles.main}>
+          <Nav />
+          <CenterBlock />
+          <SlideBar />
         </div>
+<<<<<<< Updated upstream
     );
 }
 
@@ -148,5 +165,9 @@ function SidebarItem() {
             </a>
         </div>
     );
+=======
+      );
+>>>>>>> Stashed changes
 }
 
+export default Main;
