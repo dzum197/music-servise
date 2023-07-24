@@ -17,6 +17,7 @@
     background: #313131;
   }
 
+
   .skel_author {
     width: 320px;
     height: 19px;
@@ -35,4 +36,5 @@
   }
   .skel_sidebar_image:not(:last-child) {
     margin-bottom: 30px;
+
   }/*# sourceMappingURL=skeleton.module.css.map */

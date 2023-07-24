@@ -10,8 +10,7 @@ function Container() {
           <AppRoutes />
           </div>
         </div>
-
     );
 }
 
-export default Container
+export default Container;
