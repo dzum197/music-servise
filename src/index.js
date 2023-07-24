@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/style.css';
@@ -5,9 +6,23 @@ import Container from './container';
 
 const root = ReactDOM.createRoot(document.querySelector('.root'));
 
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+// import styled from 'styled-components';
+
+import { BrowserRouter } from "react-router-dom";
+
+// import global from "./global.module.css";
+import Container from "./container";
+
+const root = ReactDOM.createRoot(document.querySelector(".root"));
+>>>>>>> Stashed changes
 root.render(
   <React.StrictMode>
-    <Container />
+   <BrowserRouter>
+      <Container />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
