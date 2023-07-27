@@ -1,19 +1,19 @@
-import React from 'react';
+// import React from 'react';
 import TrackImage from './track/track-image';
 import Author from './track/author';
 import Album from './track/album';
 
-import ButtonPrev from './buttons/button-prev';
-import ButtonPlay from './buttons/button-play';
-import ButtonNext from './buttons/button-next';
-import ButtonRepeat from './buttons/button-repeat';
-import ButtonShuffle from './buttons/button-shuffle';
-import ButtonLike from './buttons/button-like';
-import ButtonDislike from './buttons/button-dislike';
-import styles from ".bar.module.css";
+import ButtonPrev from './components/buttons/button-prev';
+import ButtonPlay from './components/buttons/button-play';
+import ButtonNext from './components/buttons/button-next';
+import ButtonRepeat from './components/buttons/button-repeat';
+import ButtonShuffle from './components/buttons/button-shuffle';
+import ButtonLike from './components/buttons/button-like';
+import ButtonDislike from './components/buttons/button-dislike';
+// import styles from ".bar.module.css";
 
-import VolumeImage from './volume/volume-image';
-import VolumeProgress from './volume/volume-progress';
+import VolumeImage from './components/volume/volume-image';
+import VolumeProgress from './components/volume/volume-progress';
 
 function Bar() {
     return(

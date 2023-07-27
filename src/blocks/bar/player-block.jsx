@@ -48,7 +48,7 @@ function PlayerBlock() {
     return () => {
       clearTimeout(timerId);
     };
-  });
+  }, []);
 
   useEffect(() => {
     const audioTime = audio.current.duration;
@@ -69,11 +69,10 @@ function PlayerBlock() {
     } else {
       clearInterval(window.play);
     }
-  });
+  }, []);
 
   console.log(1);
   return (
-<<<<<<< Updated upstream:src/blocks/bar/player-block.jsx
     <div className={styles["bar__player-block"]}>
       <div className={` ${styles["bar__player"]} ${styles.player} `}>
         <div className={styles.player__controls}>
@@ -95,35 +94,6 @@ function PlayerBlock() {
                 <TrackRender author="Дельфин" album="Звезда" />
               </>
             )}
-=======
-    <>
-      <div className={styles["bar__player-progress"]}>
-        <div
-          ref={progressLine}
-          className={styles["bar__player-progress_procent"]}
-         />
-      </div>
-
-      <div className={styles["bar__player-block"]}>
-        <div className={` ${styles.bar__player} ${styles.player} `}>
-          <div className={styles.player__controls}>
-            <ButtonPrev />
-
-            <div
-              onClick={playBtn}
-              className={` ${styleBtn["player__btn-play"]} ${styleBtn._btn} `}
-            >
-              <svg className={styleBtn["player__btn-play-svg"]} alt="play">
-                <use
-                  href={`img/icon/sprite.svg#icon-${isPlay ? "pause" : "play"}`}
-                 />
-              </svg>
-            </div>
-
-            <ButtonNext />
-            <ButtonRepeat />
-            <ButtonShuffle />
->>>>>>> Stashed changes:src/blocks/bar/bar-components/player-block.jsx
           </div>
 
           <div
