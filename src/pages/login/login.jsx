@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 import styles from "./login.module.css";
 
@@ -15,7 +13,7 @@ function Login() {
           <input className={styles.login__form_input} placeholder="Логин" />
           <input className={styles.login__form_input} placeholder="Пароль" />
 
-          <button
+          <button type="button"
             className={`${styles.login__form_button} ${styles.login__form_button_login}`}
           >
             <Link className={styles.login_link} to="/tracks" onClick={loginBtnClick}>
@@ -23,7 +21,7 @@ function Login() {
             </Link>
           </button>
         </form>
-        <button
+        <button type="button"
           className={`${styles.login__form_button} ${styles.login__form_button_reg}`}
         >
           <Link className={styles.reg_link} to="/registration">

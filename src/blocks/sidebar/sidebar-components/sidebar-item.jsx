@@ -1,8 +1,6 @@
-// import React from "react";
-
-import styles from "../sidebar-items.module.css";
-
 import { Link } from "react-router-dom";
+
+import styles from "./sidebar-items.module.css";
 
 function SidebarItem({img, link}) {
     return (

@@ -1,8 +1,8 @@
+import { useParams } from "react-router-dom";
 import Daily from "./daily";
 import Hits from "./hits";
 import Indie from "./indie";
 
-import { useParams } from "react-router-dom";
 
 const urlContent = [
   { idName: "daily", component: <Daily /> },
