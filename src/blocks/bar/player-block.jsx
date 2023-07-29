@@ -1,15 +1,15 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 
 import styles from "./player-block.module.scss";
+import styleBtn from "../components/buttons/buttons.module.scss";
+import color from "../themes.module.css";
 
-import styleBtn from "../../components/buttons/buttons.module.scss";
+import { useThemeContext } from "../../../context/theme";
 
 import SkelRenderBar from "./skeleton-render-bar";
 import TrackRender from "./track-render";
 
 import ButtonPrev from "../components/buttons/button-prev";
-import ButtonPlay from "../components/buttons/button-play";
 import ButtonNext from "../components/buttons/button-next";
 import ButtonRepeat from "../components/buttons/button-repeat";
 import ButtonShuffle from "../components/buttons/button-shuffle";
@@ -19,9 +19,16 @@ import ButtonDislike from "../components/buttons/button-dislike";
 import VolumeImage from "../components/volume/volume-image";
 import VolumeProgress from "../components/volume/volume-progress";
 
+import { ReactComponent as Play } from "../../assets/img/icon/play.svg";
+import { ReactComponent as PlayLight } from "../../img/icon/light/play-light.svg";
+
+import { ReactComponent as Pause } from "../../img/icon/pause.svg";
+import { ReactComponent as PauseLight } from "../../img/icon/light/pause-light.svg";
+
 const { useState, useEffect, useRef } = React;
 
 function PlayerBlock() {
+  const { theme } = useThemeContext();
   const [isLoading, setIsLoading] = useState(true);
 
   const [isPlay, setPlay] = useState(false);
@@ -48,7 +55,7 @@ function PlayerBlock() {
     return () => {
       clearTimeout(timerId);
     };
-  }, []);
+  });
 
   useEffect(() => {
     const audioTime = audio.current.duration;
@@ -69,31 +76,46 @@ function PlayerBlock() {
     } else {
       clearInterval(window.play);
     }
-  }, []);
+  });
 
-  console.log(1);
   return (
-    <div className={styles["bar__player-block"]}>
-      <div className={` ${styles["bar__player"]} ${styles.player} `}>
-        <div className={styles.player__controls}>
-          <ButtonPrev />
-          <ButtonPlay />
-          <ButtonNext />
-          <ButtonRepeat />
-          <ButtonShuffle />
-        </div>
-
+    <>
+      <div
+        className={`${styles["bar__player-progress"]} ${
+          theme === "light" ? color.light__progress : color.dark__progress
+        } `}
+      >
         <div
-          className={` ${styles["player__track-play"]} ${styles["track-play"]} `}
-        >
-          <div className={styles["track-play__contain"]}>
-            {isLoading ? (
-              <SkelRenderBar />
-            ) : (
-              <>
-                <TrackRender author="Дельфин" album="Звезда" />
-              </>
-            )}
+          ref={progressLine}
+          className={styles["bar__player-progress_procent"]}
+         />
+      </div>
+
+      <div className={styles["bar__player-block"]}>
+        <div className={` ${styles.bar__player} ${styles.player} `}>
+          <div className={styles.player__controls}>
+            <ButtonPrev />
+
+            <div
+              onClick={playBtn}
+              className={` ${styleBtn["player__btn-play"]} ${styleBtn._btn} `}
+            >
+              {theme === "light" ? (
+                isPlay ? (
+                  <PauseLight />
+                ) : (
+                  <PlayLight />
+                )
+              ) : isPlay ? (
+                <Pause />
+              ) : (
+                <Play />
+              )}
+            </div>
+
+            <ButtonNext />
+            <ButtonRepeat />
+            <ButtonShuffle />
           </div>
 
           <div
