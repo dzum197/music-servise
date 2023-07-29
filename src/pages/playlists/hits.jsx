@@ -1,4 +1,3 @@
-import React from "react";
 
 import Bar from "../../blocks/bar/bar";
 import Footer from "../../blocks/footer";

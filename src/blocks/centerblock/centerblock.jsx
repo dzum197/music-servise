@@ -5,7 +5,7 @@ import styles from "./centerblock.module.css";
 import PlaylistItem from "./playlist-item";
 import SkelRenderCenterblock from "./skeleton-render-centerblock";
 
-import VisibleYear from "./visible-year";
+import VisibleYear from ".";
 import VisibleAuthor from "./visible-author";
 import VisibleGenre from "./visible-genre";
 

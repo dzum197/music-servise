@@ -1,7 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // import React from "react";
-
-import styles from "./sidebar.module.css";
 import { Link } from "react-router-dom";
+import styles from "./sidebar.module.css";
 
 function SlideBarPlaylists() {
   return (

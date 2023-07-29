@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Main from "./pages/tracks(main)/main";
 import Playlists from "./pages/playlists/playlists";
@@ -10,12 +10,14 @@ import { ProtectedRoute } from "./blocks/protected-route/ProtectedRoute";
 
 export function AppRoutes() {
   return (
-    <Route element = {<ProtectedRoute />} >
+    <Routes>
+      <Route element = {<ProtectedRoute />} >
       <Route path="/" element={<Login />} />
       <Route path="/registration" element={<Reg />} />
       <Route path="/tracks" element={<Main />} />
       <Route path="/category/:id" element={<Playlists />} />
       <Route path="*" element={<NotFound />} />
     </Route>
+    </Routes>  
   );
 }
