@@ -1,5 +1,5 @@
 /* eslint-disable import/first */
-const { useState } = 'react';
+import { useState } from 'react';
 import NavMenu from "./nav-menu";
 import styles from "./nav.module.css";
 
