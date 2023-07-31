@@ -1,12 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 
 import styles from "./centerblock.module.css";
-import color from "../../themes.module.css";
-
-import { useThemeContext } from "../../context/theme";
 
 import PlaylistItem from "./centerblock-components/playlist-item";
-import SkelRenderCenterblock from "./centerblock-components/skel-render-centerblock";
+import SkelRenderCenterblock from "./centerblock-components/skeleton-render-centerblock";
 
 import VisibleYear from "./centerblock-components/visible-year";
 import VisibleAuthor from "./centerblock-components/visible-author";
@@ -34,6 +33,7 @@ function CenterBlock() {
     const timerId = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
+
 
     return () => {
       clearTimeout(timerId);
@@ -63,6 +63,7 @@ function CenterBlock() {
           className={`${styles.search__text} ${
             theme === "light" ? color.light__text : color.dark__text
           }`}
+
           type="search"
           placeholder="Поиск"
           name="search"
@@ -85,6 +86,7 @@ function CenterBlock() {
         >
           Искать по:
         </div>
+
         <div className={styles.filter__container_btn}>
           {visibleFilter === "author" && <VisibleAuthor />}
           {visibleFilter === "year" && <VisibleYear />}
@@ -99,6 +101,7 @@ function CenterBlock() {
                       } ${
               theme === "light" ? styles.light__search : color.dark__search
             }`}
+
             onClick={() => toggleVisibilityFilter("author")}
           >
             исполнителю
@@ -112,6 +115,7 @@ function CenterBlock() {
                 ? styles.filter__btn_active
                 : styles["_btn-text"]
             } ${theme === "light" ? styles.light__search : color.dark__search}`}
+
             onClick={() => toggleVisibilityFilter("year")}
           >
             году выпуска
@@ -128,6 +132,7 @@ function CenterBlock() {
                       } ${
               theme === "light" ? styles.light__search : color.dark__search
             }`}
+
             onClick={() => toggleVisibilityFilter("genre")}
           >
             жанру
@@ -168,6 +173,7 @@ function CenterBlock() {
             {theme === "light" ? <WatchLight /> : <Watch />}
           </div>
         </div>
+
 
         <div className={`${styles.content__playlist} ${styles.playlist}`}>
           {isLoading ? (

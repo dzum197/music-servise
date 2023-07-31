@@ -1,5 +1,5 @@
 .track__author {
-    width: 321px;
+    width: 27%;
     display: flex;
     justify-content: flex-start;
   }
@@ -14,7 +14,7 @@
   }
 
   .track__album {
-    width: 245px;
+    width: 20%;
   }
 
   .track__album-link {

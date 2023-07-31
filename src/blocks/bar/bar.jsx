@@ -10,6 +10,7 @@ function Bar() {
   return (
     <div className={`${styles.bar} ${theme === 'light' ? color.light__background : color.dark__main_background} `}>
       <div className={styles.bar__content}>
+
         <PlayerBlock />
       </div>
     </div>

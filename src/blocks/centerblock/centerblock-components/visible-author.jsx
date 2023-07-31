@@ -1,10 +1,7 @@
-import React from 'react';
-
 import styles from "./visible.module.css";
 
 function VisibleAuthor() {
     return (
-      <>
         <div className={`${styles.filter__dropdown_ad} ${styles.filter__dropdown_author}`}>
           <div className={styles.filter__dropdown}>
             <p className={styles.filter__dropdown_text}>Michael Jackson</p>
@@ -16,7 +13,6 @@ function VisibleAuthor() {
             <p className={styles.filter__dropdown_text}>Zhu</p>
           </div>
         </div>
-      </>
     );
 }
 

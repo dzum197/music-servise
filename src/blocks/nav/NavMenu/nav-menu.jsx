@@ -1,23 +1,27 @@
+import { Link } from "react-router-dom";
 import styles from "./nav-menu.module.css";
 
 function NavMenu() {
+  const loginClearBtn = () => {
+    localStorage.clear();
+  }
   return (
     <div className={`${styles.nav__menu} ${styles.menu}`}>
       <ul className={styles.menu__list}>
         <ul className={styles.menu__item}>
-          <a href="http://" className={styles.menu__link}>
+          <Link to="/tracks" className={styles.menu__link}>
             Главное
-          </a>
+          </Link>
         </ul>
         <ul className={styles.menu__item}>
-          <a href="http://" className={styles.menu__link}>
+          <Link to="/tracks" className={styles.menu__link}>
             Мой плейлист
-          </a>
+          </Link>
         </ul>
         <ul className={styles.menu__item}>
-          <a href="http://" className={styles.menu__link}>
+          <Link to="/" className={styles.menu__link} onClick={loginClearBtn}>
             Войти
-          </a>
+          </Link>
         </ul>
       </ul>
     </div>
