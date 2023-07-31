@@ -1,50 +1,45 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 
 import styles from "./centerblock.module.css";
 
-import PlaylistItem from "./playlist-item";
-import SkelRenderCenterblock from "./skeleton-render-centerblock";
+import PlaylistItem from "./centerblock-components/playlist-item";
+import SkelRenderCenterblock from "./centerblock-components/skeleton-render-centerblock";
 
-import VisibleYear from ".";
-import VisibleAuthor from "./visible-author";
-import VisibleGenre from "./visible-genre";
+import VisibleYear from "./centerblock-components/visible-year";
+import VisibleAuthor from "./centerblock-components/visible-author";
+import VisibleGenre from "./centerblock-components/visible-genre";
 
 const { useState, useEffect } = React;
 
 function CenterBlock() {
   const [visibleFilter, setVisibleFilter] = useState(null);
-
   const toggleVisibilityFilter = (filter) =>
     setVisibleFilter(visibleFilter === filter ? null : filter);
-
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timerId = setTimeout(() => {
       setIsLoading(false);
     }, 5000);
-
     return () => {
       clearTimeout(timerId);
     };
   });
-
   return (
     <div className={`${styles.main__centerblock} ${styles.centerblock}`}>
       <div className={`${styles.centerblock__search} ${styles.search}`}>
         <svg className={styles.search__svg}>
-          <use href="img/icon/sprite.svg#icon-search"></use>
+          <use href="img/icon/sprite.svg#icon-search" />
         </svg>
         <input
           className={styles.search__text}
           type="search"
           placeholder="Поиск"
           name="search"
-        ></input>
+         />
       </div>
-
       <h2 className={styles.centerblock__h2}>Треки</h2>
-
       <div className={`${styles.centerblock__filter} ${styles.filter}`}>
         <div className={styles.filter__title}>Искать по:</div>
         <div className={styles.filter__container_btn}>
@@ -57,20 +52,19 @@ function CenterBlock() {
                       ${
                         visibleFilter === "author"
                           ? styles.filter__btn_active
-                          : styles['_btn-text']
+                          : styles["_btn-text"]
                       }`}
             onClick={() => toggleVisibilityFilter("author")}
           >
             исполнителю
           </div>
-
           <div
             className={`${styles.filter__button} ${styles["button-year"]}  
             ${styles["_btn-text"]}  
                       ${
                         visibleFilter === "year"
                           ? styles.filter__btn_active
-                          : styles['_btn-text']
+                          : styles["_btn-text"]
                       }`}
             onClick={() => toggleVisibilityFilter("year")}
           >
@@ -78,11 +72,13 @@ function CenterBlock() {
           </div>
 
           <div
-            className={`${styles.filter__button} ${styles["button-genre"]}  ${styles["_btn-text"]} 
+            className={`${styles.filter__button} ${styles["button-genre"]}  ${
+              styles["_btn-text"]
+            } 
                       ${
                         visibleFilter === "genre"
                           ? styles.filter__btn_active
-                          : styles['_btn-text']
+                          : styles["_btn-text"]
                       }`}
             onClick={() => toggleVisibilityFilter("genre")}
           >
@@ -90,7 +86,6 @@ function CenterBlock() {
           </div>
         </div>
       </div>
-
       <div className={styles.centerblock__content}>
         <div className={`${styles.content__title} ${styles.playlist_title}`}>
           <div className={`${styles.playlist_title__col} ${styles.col01}`}>
@@ -104,11 +99,10 @@ function CenterBlock() {
           </div>
           <div className={`${styles.playlist_title__col} ${styles.col04}`}>
             <svg className={styles.playlist_title__svg} alt="time">
-              <use href="img/icon/sprite.svg#icon-watch"></use>
+              <use href="img/icon/sprite.svg#icon-watch" />
             </svg>
           </div>
         </div>
-
         <div className={`${styles.content__playlist} ${styles.playlist}`}>
           {isLoading ? (
             <>
@@ -199,5 +193,4 @@ function CenterBlock() {
     </div>
   );
 }
-
 export default CenterBlock;

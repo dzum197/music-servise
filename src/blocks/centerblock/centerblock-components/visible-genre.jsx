@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from "./visible.module.css";
 
 function VisibleGenre() {
@@ -14,4 +12,5 @@ function VisibleGenre() {
       </div>
     );
 }
+
 export default VisibleGenre

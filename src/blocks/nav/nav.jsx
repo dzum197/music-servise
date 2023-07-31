@@ -1,9 +1,7 @@
-// import React from 'react';
+/* eslint-disable import/first */
+import { useState } from 'react';
 import NavMenu from "./nav-menu";
-
 import styles from "./nav.module.css";
-
-const { useState } = React;
 
 function Nav() {
   const [visible, setVisible] = useState(false);
@@ -17,7 +15,7 @@ function Nav() {
       </div>
       <div
         className={`${styles.nav__burger} ${styles.burger}`}
-        onClick={toggleVisibility}
+        onClick={toggleVisibility} aria-hidden="true"
       >
         <span className={styles.burger__line} />
         <span className={styles.burger__line} />
