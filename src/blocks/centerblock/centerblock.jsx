@@ -1,15 +1,12 @@
-import React from "react";
-
 import styles from "./centerblock.module.css";
-
 import PlaylistItem from "./playlist-item";
 import SkelRenderCenterblock from "./skeleton-render-centerblock";
+import VisibleYear from "./visible-year";
 
-import VisibleYear from ".";
 import VisibleAuthor from "./visible-author";
 import VisibleGenre from "./visible-genre";
 
-const { useState, useEffect } = React;
+const { useState, useEffect } = 'react';
 
 function CenterBlock() {
   const [visibleFilter, setVisibleFilter] = useState(null);
@@ -33,14 +30,14 @@ function CenterBlock() {
     <div className={`${styles.main__centerblock} ${styles.centerblock}`}>
       <div className={`${styles.centerblock__search} ${styles.search}`}>
         <svg className={styles.search__svg}>
-          <use href="img/icon/sprite.svg#icon-search"></use>
+          <use href="img/icon/sprite.svg#icon-search" />
         </svg>
         <input
           className={styles.search__text}
           type="search"
           placeholder="Поиск"
           name="search"
-        ></input>
+         />
       </div>
 
       <h2 className={styles.centerblock__h2}>Треки</h2>
@@ -104,7 +101,7 @@ function CenterBlock() {
           </div>
           <div className={`${styles.playlist_title__col} ${styles.col04}`}>
             <svg className={styles.playlist_title__svg} alt="time">
-              <use href="img/icon/sprite.svg#icon-watch"></use>
+              <use href="img/icon/sprite.svg#icon-watch" />
             </svg>
           </div>
         </div>
