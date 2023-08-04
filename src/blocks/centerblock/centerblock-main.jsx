@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 
 import styles from "./centerblock.module.css";
@@ -6,17 +8,17 @@ import color from "../../themes.module.css";
 import { useThemeContext } from "../../context/theme";
 
 import PlaylistItem from "./centerblock-components/playlist-item";
-import SkelRenderCenterblock from "./centerblock-components/skel-render-centerblock";
+import SkelRenderCenterblock from "./centerblock-components/skeleton-render-centerblock";
 
 import VisibleYear from "./centerblock-components/visible-year";
 import VisibleAuthor from "./centerblock-components/visible-author";
 import VisibleGenre from "./centerblock-components/visible-genre";
 
-import { ReactComponent as Search } from "../../assets/img/icon/search.svg";
-import { ReactComponent as SearchLight } from "../../assets/img/icon/light/search-light.svg";
+import { ReactComponent as Search } from "../../img/icon/search.svg";
+import { ReactComponent as SearchLight } from "../../img/icon/light/search-light.svg";
 
-import { ReactComponent as Watch } from "../../assets/img/icon/watch.svg";
-import { ReactComponent as WatchLight } from "../../assets/img/icon/light/watch-light.svg";
+import { ReactComponent as Watch } from "../../img/icon/watch.svg";
+import { ReactComponent as WatchLight } from "../../img/icon/light/watch-light.svg";
 
 const { useState, useEffect } = React;
 

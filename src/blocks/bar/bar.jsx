@@ -3,7 +3,7 @@ import color from "../../themes.module.css";
 
 import { useThemeContext } from "../../context/theme";
 
-import PlayerBlock from "./player-block";
+import PlayerBlock from "./bar-components/player-block";
 
 function Bar() {
   const { theme } = useThemeContext();

@@ -1,10 +1,8 @@
-import React from 'react';
-
 import styles from "./playlist-item.module.css";
 
-import SkelAuthor from "../components/skeleton/skeleton-author";
-import SkelImage from "../components/skeleton/skeleton-image";
-import SkelTitle from "../components/skeleton/skeleton-title";
+import SkelAuthor from "../../components/skeleton/skeleton-author";
+import SkelImage from "../../components/skeleton/skeleton-image";
+import SkelTitle from "../../components/skeleton/skeleton-title";
 
 function SkelRenderCenterblock() {
     return (

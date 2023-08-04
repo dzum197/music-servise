@@ -1,12 +1,10 @@
-import React from 'react';
-
 import styles from "./playlist-item.module.css";
 
-import TrackTitle from "../components/track/track-title";
-import TrackImage from "../components/track/track-image";
-import Author from "../components/track/author";
-import Album from "../components/track/album";
-import TrackTime from "../components/track/track-time";
+import TrackTitle from "../../components/track/track-title";
+import TrackImage from "../../components/track/track-image";
+import Author from "../../components/track/author";
+import Album from "../../components/track/album";
+import TrackTime from "../../components/track/track-time";
 
 function PlaylistItem(props) {
     const { title, author, album, time } = props;

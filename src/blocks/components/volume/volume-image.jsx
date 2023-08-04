@@ -1,13 +1,20 @@
 import styles from "./volume.module.scss";
+import { useThemeContext } from "../../../context/theme";
+
+import { ReactComponent as Volume } from "../../../img/icon/volume.svg";
+import { ReactComponent as VolumeLight } from "../../../img/icon/light/volume-light.svg";
 
 function VolumeImage() {
-    return(
+    const { theme } = useThemeContext();
+    return (
         <div className={styles.volume__image}>
-            <svg className={styles.volume__svg} alt="volume">
-                <use href="img/icon/sprite.svg#icon-volume" />
-            </svg>
+        {theme === "light" ? (
+            <VolumeLight className={styles.volume__svg} />
+        ) : (
+            <Volume className={styles.volume__svg} />
+        )}
         </div>
-    );
+  );
 }
 
-export default VolumeImage
+export default VolumeImage;

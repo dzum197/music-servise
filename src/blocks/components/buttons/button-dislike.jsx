@@ -1,13 +1,23 @@
 import styles from "./buttons.module.scss";
 
+import { useThemeContext } from "../../../context/theme";
+
+import { ReactComponent as Dislike } from "../../../img/icon/dislike.svg";
+import { ReactComponent as DislikeLight } from "../../../img/icon/light/dislike-light.svg";
+
 function ButtonDislike() {
-    return(
-        <div className={` ${styles['track-play__dislike']} ${styles['_btn-icon']} `}>
-            <svg className={styles['track-play__dislike-svg']} alt="dislike">
-                <use href="img/icon/sprite.svg#icon-dislike" />
-            </svg>
-        </div>
-    );
+  const { theme } = useThemeContext();
+  return (
+    <div
+      className={` ${styles["track-play__dislike"]} ${styles["_btn-icon"]} `}
+    >
+      {theme === "light" ? (
+        <DislikeLight className={styles["track-play__dislike-svg"]} />
+      ) : (
+        <Dislike className={styles["track-play__dislike-svg"]} />
+      )}
+    </div>
+  );
 }
 
-export default ButtonDislike
+export default ButtonDislike;

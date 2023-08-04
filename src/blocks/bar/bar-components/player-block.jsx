@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
 
 import styles from "./player-block.module.scss";
@@ -6,21 +7,21 @@ import color from "../themes.module.css";
 
 import { useThemeContext } from "../../../context/theme";
 
-import SkelRenderBar from "./skeleton-render-bar";
-import TrackRender from "./track-render";
+import SkelRenderBar from "../skeleton-render-bar";
+import TrackRender from "../track-render";
 
-import ButtonPrev from "../components/buttons/button-prev";
-import ButtonNext from "../components/buttons/button-next";
-import ButtonRepeat from "../components/buttons/button-repeat";
-import ButtonShuffle from "../components/buttons/button-shuffle";
-import ButtonLike from "../components/buttons/button-like";
-import ButtonDislike from "../components/buttons/button-dislike";
+import ButtonPrev from "../../components/buttons/button-prev";
+import ButtonNext from "../../components/buttons/button-next";
+import ButtonRepeat from "../../components/buttons/button-repeat";
+import ButtonShuffle from "../../components/buttons/button-shuffle";
+import ButtonLike from "../../components/buttons/button-like";
+import ButtonDislike from "../../components/buttons/button-dislike";
 
-import VolumeImage from "../components/volume/volume-image";
-import VolumeProgress from "../components/volume/volume-progress";
+import VolumeImage from "../../components/volume/volume-image";
+import VolumeProgress from "../../components/volume/volume-progress";
 
-import { ReactComponent as Play } from "../../assets/img/icon/play.svg";
-import { ReactComponent as PlayLight } from "../../img/icon/light/play-light.svg";
+import { ReactComponent as Play } from "../../img/icon/play.svg";
+import { ReactComponent as PlayLight } from "./img/icon/light/play-light.svg";
 
 import { ReactComponent as Pause } from "../../img/icon/pause.svg";
 import { ReactComponent as PauseLight } from "../../img/icon/light/pause-light.svg";

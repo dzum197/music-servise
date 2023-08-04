@@ -1,13 +1,22 @@
 import styles from "./buttons.module.scss";
 
+import { useThemeContext } from "../../../context/theme";
+
+import {ReactComponent as Shuffle} from "../../../img/icon/shuffle.svg";
+import { ReactComponent as ShuffleLight } from "../../../img/icon/light/shuffle-light.svg";
+
 function ButtonShuffle() {
+  const { theme } = useThemeContext();
   return (
     <div
       className={` ${styles["player__btn-shuffle"]} ${styles["_btn-icon"]} `}
     >
-      <svg className={styles["player__btn-shuffle-svg"]} alt="shuffle">
-        <use href="img/icon/sprite.svg#icon-shuffle" />
-      </svg>
+      {theme === "light" ? (
+      <ShuffleLight className={styles["player__btn-shuffle-svg"]} />
+      ) : (
+        <Shuffle className={styles["player__btn-shuffle-svg"]} />
+      )}
+
     </div>
   );
 }

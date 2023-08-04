@@ -1,12 +1,28 @@
 import styles from "./track.module.css";
+import color from "../../../themes.module.css";
+
+import { useThemeContext } from "../../../context/theme";
+
+import { ReactComponent as Like } from "../../../img/icon/like.svg";
+import { ReactComponent as LikeLight } from "../../../img/icon/light/like-light.svg";
 
 function TrackTime({ time }) {
+  const { theme } = useThemeContext();
   return (
     <div className={styles.track__time}>
-      <svg className={styles["track__time-svg"]} alt="time">
-        <use href="img/icon/sprite.svg#icon-like" />
-      </svg>
-      <span className={styles["track__time-text"]}>{time}</span>
+      {theme === "light" ? (
+        <LikeLight className={styles["track__time-svg"]} />
+      ) : (
+        <Like className={styles["track__time-svg"]} />
+      )}
+
+      <span
+        className={`${styles["track__time-text"]} ${
+          theme === "light" ? color.light__text_tracks : color.dark__text_tracks
+        }`}
+      >
+        {time}
+      </span>
     </div>
   );
 }
