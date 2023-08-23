@@ -1,11 +1,16 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
 import { Link } from "react-router-dom";
 import { useThemeContext } from "../../../context/theme";
 
 import styles from "./nav-menu.module.css";
-import color from "./themes.module.css";
+import color from "../../../themes.module.css";
 
-import { ReactComponent as Moon } from "../../img/icon/dark-theme.svg";
-import { ReactComponent as Sun } from "../../img/icon/light-theme.svg";
+import { ReactComponent as Moon } from "../../../img/icon/dark-theme.svg";
+import { ReactComponent as Sun } from "../../../img/icon/light-theme.svg";
 
 function NavMenu() {
   const loginClearBtn = () => {

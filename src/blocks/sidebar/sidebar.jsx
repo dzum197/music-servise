@@ -3,7 +3,7 @@ import color from "../../themes.module.css";
 
 import { useThemeContext } from "../../context/theme";
 
-import SidebarPersonal from "./sidebar-personal";
+import SidebarPersonal from "./sidebar-components/sidebar-personal";
 import SidebarItem from "./sidebar-item";
 
 function SlideBar() {

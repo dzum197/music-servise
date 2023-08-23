@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable import/first */
+import React from "react";
+import { useState } from React;
 import NavMenu from "./NavMenu/nav-menu";
 
 import { useThemeContext } from "../../context/theme";
@@ -9,8 +11,6 @@ import logoLight from "../../img/logo-light.png";
 
 import styles from "./nav.module.css";
 import color from "../../themes.module.css";
-
-const { useState } = 'react';
 
 function Nav() {
   const [visible, setVisible] = useState(false);

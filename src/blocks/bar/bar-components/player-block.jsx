@@ -1,9 +1,14 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/media-has-caption */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 
 import styles from "./player-block.module.scss";
-import styleBtn from "../components/buttons/buttons.module.scss";
-import color from "../themes.module.css";
+import styleBtn from "../../components/buttons/buttons.module.scss";
+import color from "../../../themes.module.css";
 
 import { useThemeContext } from "../../../context/theme";
 
@@ -20,11 +25,11 @@ import ButtonDislike from "../../components/buttons/button-dislike";
 import VolumeImage from "../../components/volume/volume-image";
 import VolumeProgress from "../../components/volume/volume-progress";
 
-import { ReactComponent as Play } from "../../img/icon/play.svg";
-import { ReactComponent as PlayLight } from "./img/icon/light/play-light.svg";
+import { ReactComponent as Play } from "../../../img/icon/play.svg";
+import { ReactComponent as PlayLight } from "../../../img/icon/light/play-light.svg";
 
-import { ReactComponent as Pause } from "../../img/icon/pause.svg";
-import { ReactComponent as PauseLight } from "../../img/icon/light/pause-light.svg";
+import { ReactComponent as Pause } from "../../../img/icon/pause.svg";
+import { ReactComponent as PauseLight } from "../../../img/icon/light/pause-light.svg";
 
 const { useState, useEffect, useRef } = React;
 

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from "react-router-dom";
 import styles from "./sidebar.module.css";
 
