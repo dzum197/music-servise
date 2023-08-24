@@ -1,7 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable import/first */
-import React from "react";
-import { useState } from React;
+import React, { useState } from "react";
 import NavMenu from "./NavMenu/nav-menu";
 
 import { useThemeContext } from "../../context/theme";

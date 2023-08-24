@@ -1,8 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable no-console */
-/* eslint-disable import/no-extraneous-dependencies */
 import { Link } from "react-router-dom";
 import { useThemeContext } from "../../../context/theme";
 

@@ -1,6 +1,5 @@
-import React from "react";
-import { useState } from React;
-// const { useState } = React;
+// import React from "react"; // const { useState } = React;
+import React, { useState } from "react";
 
 import { AppRoutes } from "./routes";
 
