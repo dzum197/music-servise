@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import NavMenu from "./NavMenu/nav-menu";
 
@@ -43,21 +46,21 @@ function Nav() {
               ? color.light__border_burger
               : color.dark__border_burger
           } `}
-        ></span>
+        />
         <span
           className={`${styles.burger__line} ${
             theme === "light"
               ? color.light__border_burger
               : color.dark__border_burger
           } `}
-        ></span>
+        />
         <span
           className={`${styles.burger__line} ${
             theme === "light"
               ? color.light__border_burger
               : color.dark__border_burger
           } `}
-        ></span>
+        />
       </div>
 
       {visible && <NavMenu />}

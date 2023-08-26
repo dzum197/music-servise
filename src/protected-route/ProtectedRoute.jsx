@@ -9,3 +9,5 @@ export function ProtectedRoute({ redirectPart = '/' }) {
 
     return <Outlet />
 }
+
+export default ProtectedRoute;

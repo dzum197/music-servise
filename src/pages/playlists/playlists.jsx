@@ -7,7 +7,7 @@ import Indie from "./indie";
 const urlContent = [
   { idName: "daily", component: <Daily /> },
   { idName: "hits", component: <Hits /> },
-  { idName: "indie", component: <Indie /> },
+  { idName: "indie", component: <Indie /> }
 ];
 
 function Playlists() {
