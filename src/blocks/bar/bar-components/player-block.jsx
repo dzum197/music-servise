@@ -131,7 +131,7 @@ function PlayerBlock() {
               {isLoading ? (
                 <SkelRenderBar />
               ) : (
-                <TrackRender author="Ты та..." album="Баста" />
+                <TrackRender author="Звезда" album="Дельфин" />
               )}
             </div>
 

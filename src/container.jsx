@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 // import React from "react"; // const { useState } = React;
 import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes";
 
 import styles from "./container.module.css";
@@ -22,7 +22,6 @@ function Container() {
   }
 
   return (
-    <BrowserRouter>
       <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme}}>
         <div className={styles.wrapper}>
           <div className={styles.container}>
@@ -30,7 +29,6 @@ function Container() {
           </div>
         </div>
       </ThemeContext.Provider>
-    </BrowserRouter>
   );
 }
 
