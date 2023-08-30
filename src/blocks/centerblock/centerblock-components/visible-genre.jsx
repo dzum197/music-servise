@@ -12,4 +12,5 @@ function VisibleGenre() {
       </div>
     );
 }
+
 export default VisibleGenre
