@@ -1,13 +1,21 @@
 import styles from "./buttons.module.scss";
 
+import { useThemeContext } from "../../../context/theme";
+
+import { ReactComponent as Like } from "../../../img/icon/like.svg";
+import { ReactComponent as LikeLight } from "../../../img/icon/light/like-light.svg";
+
 function ButtonLike() {
-    return(
-        <div className={` ${styles['track-play__like']} ${styles['_btn-icon']} `}>
-            <svg className={styles['track-play__like-svg']} alt="like">
-                <use href="img/icon/sprite.svg#icon-like" />
-            </svg>
-        </div>
-    );
+  const { theme } = useThemeContext();
+  return (
+    <div className={` ${styles["track-play__like"]} ${styles["_btn-icon"]} `}>
+      {theme === "light" ? (
+        <LikeLight className={styles["track-play__like-svg"]} />
+      ) : (
+        <Like className={styles["track-play__like-svg"]} />
+      )}
+    </div>
+  );
 }
 
-export default ButtonLike
+export default ButtonLike;

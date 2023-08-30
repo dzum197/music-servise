@@ -1,5 +1,3 @@
-// import React from 'react';
-
 function TrackTitle({title}) {
     return (
         <div className="track__title-text">

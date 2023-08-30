@@ -1,5 +1,3 @@
-// import React from 'react';
-
 function Author({author}) {
     return (
         <div className="track__author">

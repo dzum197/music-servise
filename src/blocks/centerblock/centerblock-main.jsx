@@ -11,11 +11,11 @@ import VisibleYear from "./centerblock-components/visible-year";
 import VisibleAuthor from "./centerblock-components/visible-author";
 import VisibleGenre from "./centerblock-components/visible-genre";
 
-import { ReactComponent as Search } from "../../assets/img/icon/search.svg";
-import { ReactComponent as SearchLight } from "../../assets/img/icon/light/search-light.svg";
+import { ReactComponent as Search } from "../../img/icon/search.svg";
+import { ReactComponent as SearchLight } from "../../img/icon/light/search-light.svg";
 
-import { ReactComponent as Watch } from "../../assets/img/icon/watch.svg";
-import { ReactComponent as WatchLight } from "../../assets/img/icon/light/watch-light.svg";
+import { ReactComponent as Watch } from "../../img/icon/watch.svg";
+import { ReactComponent as WatchLight } from "../../img/icon/light/watch-light.svg";
 
 const { useState, useEffect } = React;
 

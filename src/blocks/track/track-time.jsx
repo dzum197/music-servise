@@ -1,5 +1,3 @@
-// import React from 'react';
-
 function TrackTime({time}) {
     return(
         <div className="track__time">

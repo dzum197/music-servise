@@ -1,48 +1,27 @@
 import styles from "./sidebar.module.css";
+import color from "../../themes.module.css";
+
+import { useThemeContext } from "../../context/theme";
 
 import SidebarPersonal from "./sidebar-components/sidebar-personal";
-import SidebarItem from "./sidebar-components/sidebar-item";
-
-import SkelSidebarImage from "../components/skeleton/skeleton-sidebar_image";
-
-const { useState, useEffect } = React;
+import SidebarItem from "./sidebar-item";
 
 function SlideBar() {
-  const [isLoading, setIsLoading] = useState(true);
+  const { theme } = useThemeContext();
+    return (
+      <div className={`${styles.main__sidebar} ${styles.sidebar} ${theme === 'light' ? color.light__background : color.dark__main_background} `}>
+        <SidebarPersonal name="Sergey.Ivanov" />
+        <div className={styles.sidebar__avatar} />
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  });
-
-  return (
-    <div className={`${styles.main__sidebar} ${styles.sidebar}`}>
-      <SidebarPersonal name="Sergey.Ivanov" />
-
-      <div className={styles.sidebar__block}>
-        <div className={styles.sidebar__list}>
-          {isLoading ? (
-            <>
-              <SkelSidebarImage />
-              <SkelSidebarImage />
-              <SkelSidebarImage />
-            </>
-          ) : (
-            <>
-              <SidebarItem img="img/playlist01.png" link="/category/daily"/>
-              <SidebarItem img="img/playlist02.png" link="/category/hits" />
-              <SidebarItem img="img/playlist03.png" link="/category/indie"/>
-            </>
-          )}
+        <div className={styles.sidebar__block}>
+          <div className={styles.sidebar__list}>
+            <SidebarItem />
+            <SidebarItem />
+            <SidebarItem />
+          </div>
         </div>
       </div>
-      </div>
-  );
+    );
 }
 
 export default SlideBar;
